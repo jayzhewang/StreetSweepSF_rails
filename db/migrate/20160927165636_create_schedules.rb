@@ -23,8 +23,6 @@ class CreateSchedules < ActiveRecord::Migration
       t.integer :ZIP_CODE
       t.string :NHOOD
       t.string :DISTRICT
-
-      t.timestamp null: false
     end
 
     add_index :schedules, :STREETNAME
