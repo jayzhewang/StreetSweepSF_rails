@@ -1,0 +1,12 @@
+json.array! @schedules,
+            :WEEKDAY,
+            :CORRIDOR,
+            :FROMHOUR,
+            :TOHOUR,
+            :WEEK1OFMON,
+            :WEEK2OFMON,
+            :WEEK3OFMON,
+            :WEEK4OFMON,
+            :WEEK5OFMON,
+            :ZIP_CODE,
+            :NHOOD
