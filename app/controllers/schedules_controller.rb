@@ -1,6 +1,10 @@
 class SchedulesController < ApplicationController
   def index
-    @schedules = Schedule.where(CORRIDOR: params[:CORRIDOR])
+    if params[:address]
+      @schedules = Schedule.where(CORRIDOR: params[:address].delete('\\"'))
+    else
+      @schedules = []
+    end
     render :index
   end
 
