@@ -1,7 +1,7 @@
 class SchedulesController < ApplicationController
   def index
     if params[:address]
-      @schedules = Schedule.where(CORRIDOR: params[:address].delete('\\"'))
+      @schedules = Schedule.where('"CORRIDOR" LIKE ?', "%#{params[:address].split(" ")[1]}%").all
     else
       @schedules = []
     end
